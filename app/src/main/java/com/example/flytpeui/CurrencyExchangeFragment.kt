@@ -144,11 +144,7 @@ class CurrencyExchangeFragment:Fragment() {
 
     private fun setApiDataObserver() {
         viewModel.rawCurrencyData.observe(viewLifecycleOwner){
-            if(fakeInPut == "0"){
-                reCalculated()
-            }else{
-                reCalculated(fakeInPut.toFloat())
-            }
+            reCalculated()
         }
     }
 
