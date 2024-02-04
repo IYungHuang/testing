@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
+import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
@@ -83,6 +84,8 @@ class SettingFragment: Fragment() {
         //
         binding.spinnerCoin.onItemSelectedListener = object : OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>, p1: View?, p2: Int, p3: Long) {
+               val selectedT = parent.getChildAt(0) as TextView
+                selectedT.setTextColor(Color.WHITE)
                val sharedPreference = (requireActivity() as MainActivity).sharedPreferences
                 sharedPreference.edit().putString(FlyTPEConstants.SET_DEFAULT_COIN, parent.selectedItem.toString()).apply()
                 viewModel.setDefaultCoin(parent.selectedItem.toString())
@@ -99,9 +102,11 @@ class SettingFragment: Fragment() {
             if(it){
                 binding.tvNightNode.setTextColor(Color.WHITE)
                 binding.tvDefaultCoin.setTextColor(Color.WHITE)
+                binding.spinnerCoin.setPopupBackgroundResource(R.color.full_background)
             }else {
                 binding.tvNightNode.setTextColor(Color.BLACK)
                 binding.tvDefaultCoin.setTextColor(Color.BLACK)
+                binding.spinnerCoin.setPopupBackgroundResource(R.color.full_background)
             }
         }
     }

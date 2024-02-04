@@ -221,7 +221,7 @@ class CurrencyExchangeFragment:Fragment() {
         binding.includeInfoViewCAD.clCurrencyExInfoDetailContainer.clicks().throttleFirst(FlyTPEConstants.CLICK_MILLISECONDS_TIMER, TimeUnit.MILLISECONDS).subscribe{
             calculateBase = FlyTPEConstants.CAD
             changeMoneyColor()
-            if(inPut != "" && inPut.toInt() != 0){
+            if(inPut != "" && inPut.toFloat() != 0f){
                 reCalculated(inPut.toFloat())
             }else{
                 reCalculated()
@@ -230,7 +230,7 @@ class CurrencyExchangeFragment:Fragment() {
         binding.includeInfoViewCNY.clCurrencyExInfoDetailContainer.clicks().throttleFirst(FlyTPEConstants.CLICK_MILLISECONDS_TIMER, TimeUnit.MILLISECONDS).subscribe{
             calculateBase = FlyTPEConstants.CNY
             changeMoneyColor()
-            if(inPut != "" && inPut.toInt() != 0){
+            if(inPut != "" && inPut.toFloat() != 0f){
                 reCalculated(inPut.toFloat())
             }else{
                 reCalculated()
@@ -239,7 +239,7 @@ class CurrencyExchangeFragment:Fragment() {
         binding.includeInfoViewEUR.clCurrencyExInfoDetailContainer.clicks().throttleFirst(FlyTPEConstants.CLICK_MILLISECONDS_TIMER, TimeUnit.MILLISECONDS).subscribe{
             calculateBase = FlyTPEConstants.EUR
             changeMoneyColor()
-            if(inPut != "" && inPut.toInt() != 0){
+            if(inPut != "" && inPut.toFloat() != 0f){
                 reCalculated(inPut.toFloat())
             }else{
                 reCalculated()
@@ -248,7 +248,7 @@ class CurrencyExchangeFragment:Fragment() {
         binding.includeInfoViewJPY.clCurrencyExInfoDetailContainer.clicks().throttleFirst(FlyTPEConstants.CLICK_MILLISECONDS_TIMER, TimeUnit.MILLISECONDS).subscribe{
             calculateBase = FlyTPEConstants.JPY
             changeMoneyColor()
-            if(inPut != "" && inPut.toInt() != 0){
+            if(inPut != "" && inPut.toFloat() != 0f){
                 reCalculated(inPut.toFloat())
             }else{
                 reCalculated()
@@ -257,7 +257,7 @@ class CurrencyExchangeFragment:Fragment() {
         binding.includeInfoViewUSD.clCurrencyExInfoDetailContainer.clicks().throttleFirst(FlyTPEConstants.CLICK_MILLISECONDS_TIMER, TimeUnit.MILLISECONDS).subscribe{
             calculateBase = FlyTPEConstants.USD
             changeMoneyColor()
-            if(inPut != "" && inPut.toInt() != 0){
+            if(inPut != "" && inPut.toFloat() != 0f){
                 reCalculated(inPut.toFloat())
             }else{
                 reCalculated()
@@ -266,7 +266,7 @@ class CurrencyExchangeFragment:Fragment() {
         binding.includeInfoViewAUD.clCurrencyExInfoDetailContainer.clicks().throttleFirst(FlyTPEConstants.CLICK_MILLISECONDS_TIMER, TimeUnit.MILLISECONDS).subscribe{
             calculateBase = FlyTPEConstants.AUD
             changeMoneyColor()
-            if(inPut != "" && inPut.toInt() != 0){
+            if(inPut != "" && inPut.toFloat() != 0f){
                 reCalculated(inPut.toFloat())
             }else{
                 reCalculated()
