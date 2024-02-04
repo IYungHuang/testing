@@ -74,6 +74,8 @@ class MainActivity : AppCompatActivity() {
     private var settingFragment: SettingFragment? = null
     private var isNightMode = false
 
+    private var isInit = true
+
     //
     lateinit var animationBubble: Animation
     private lateinit var newInterpolator: BubbleInterpolator
@@ -321,9 +323,15 @@ class MainActivity : AppCompatActivity() {
 
     //region 連結api取得資料
     private fun getApiData() {
-        viewModel.getFlyData(FlyTPEConstants.TAKE_OFF_FLY, FlyTPEConstants.AIRPORT)
-        viewModel.getFlyData(FlyTPEConstants.ARRIVAL_FLY, FlyTPEConstants.AIRPORT)
-        viewModel.getCurrencyData()
+        if(isInit){
+            isInit = false
+            viewModel.getFlyData(FlyTPEConstants.TAKE_OFF_FLY, FlyTPEConstants.AIRPORT)
+            viewModel.getFlyData(FlyTPEConstants.ARRIVAL_FLY, FlyTPEConstants.AIRPORT)
+            viewModel.getCurrencyData()
+        }else{
+            viewModel.getFlyData(FlyTPEConstants.TAKE_OFF_FLY, FlyTPEConstants.AIRPORT)
+            viewModel.getFlyData(FlyTPEConstants.ARRIVAL_FLY, FlyTPEConstants.AIRPORT)
+        }
     }
     //endregion
 
