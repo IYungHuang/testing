@@ -5,7 +5,7 @@ class FlyTPEConstants {
         const val EMPTY_STRING = ""
         const val FLY_API = "https://e-traffic.taichung.gov.tw/DataAPI/api/"
         const val CURRENCY_API = "https://api.freecurrencyapi.com/v1/"
-        const val API_KEY = "fca_live_k1gMEpTWBSBGuGCsQd9uwDQarqJLpGz4CNEsC6NL"
+        const val API_KEY = "fca_live_00soFHAVtoNetnqgp0yjS27q2bVcKZkscN1vcPHF"
         const val DATA = "data"
         const val USER_INFO = "userInfo"
         const val SET_NIGHT_MODE = "isNightMode"
