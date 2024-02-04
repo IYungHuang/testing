@@ -11,7 +11,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.View
 import android.view.Window
 import android.view.animation.Animation
@@ -140,21 +139,23 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //region api資料取得錯誤
     private fun setRetrofitErrorFly() {
         viewModel.retrofitErrorFly.observe(this) {
-            showCalErrorSnackBar(getString(R.string.flyInfoRetrofitError) + it)
+            showGetApiErrorSnackBar(getString(R.string.flyInfoRetrofitError) + it)
             closeHeartBeat()
         }
     }
 
     private fun setRetrofitErrorCurrency() {
         viewModel.retrofitErrorCurrency.observe(this) {
-            showCalErrorSnackBar(getString(R.string.currencyInfoRetrofitError) + it)
+            showGetApiErrorSnackBar(getString(R.string.currencyInfoRetrofitError) + it)
             closeHeartBeat()
         }
     }
 
-    private fun showCalErrorSnackBar(error: String) {
+
+    private fun showGetApiErrorSnackBar(error: String) {
 
         val snackBar = Snackbar.make(
             findViewById(R.id.mainActivitySnackBarContainer),
@@ -194,6 +195,7 @@ class MainActivity : AppCompatActivity() {
         emailIntent.selector = selectorIntent
         resultLauncherSendMailActivity.launch(emailIntent)
     }
+    //endregion
 
     private fun checkSharedPreferenceData(): Boolean {
         isNightMode = sharedPreferences.getBoolean(FlyTPEConstants.SET_NIGHT_MODE, false)

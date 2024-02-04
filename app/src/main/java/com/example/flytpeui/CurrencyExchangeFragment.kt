@@ -442,6 +442,7 @@ class CurrencyExchangeFragment:Fragment() {
         }
     }
 
+    //region 計算邏輯錯誤snack bar
     private fun showCalErrorSnackBar() {
         val snackBar = Snackbar.make(
             requireActivity().findViewById(R.id.currencySnackBarContainer),
@@ -451,6 +452,7 @@ class CurrencyExchangeFragment:Fragment() {
 
         snackBar.show()
     }
+    //endregion
 
     private fun reSet() {
         fakeInPut = "0"
