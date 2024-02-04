@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#DADADA">
+    <!--添加默认背景颜色-->
+    <item android:drawable="@drawable/fly_info_item_background" />
+</ripple>

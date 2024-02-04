@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clFlyInfoDetailContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/fly_info_item_background">
+
+    <include
+        android:id="@+id/tvSetOrderTime"
+        layout="@layout/blank_fly_info_item_text_arranged"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/tvSetRealTime"
+        layout="@layout/blank_fly_info_item_text_arranged"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toEndOf="@+id/tvSetOrderTime"
+        app:layout_constraintTop_toTopOf="@+id/tvSetOrderTime" />
+
+    <include
+        android:id="@+id/tvSetAirPortFrom"
+        layout="@layout/blank_fly_info_item_text_arranged_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvSetRealTime"
+        app:layout_constraintTop_toTopOf="@+id/tvSetOrderTime" />
+
+    <include
+        android:id="@+id/tvSetFlyLineInfo"
+        layout="@layout/blank_fly_info_item_text_arranged"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/tvSetOrderTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvSetOrderTime" />
+
+    <View
+        android:id="@+id/viewFromTo"
+        android:layout_width="2dp"
+        android:layout_height="20dp"
+        android:background="@color/colorPrimaryDarkNight"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tvSetAirPortArrival"
+        app:layout_constraintEnd_toEndOf="@+id/tvSetAirPortFrom"
+        app:layout_constraintStart_toStartOf="@+id/tvSetAirPortFrom"
+        app:layout_constraintTop_toBottomOf="@+id/tvSetAirPortFrom" />
+
+    <include
+        android:id="@+id/tvSetAirPortArrival"
+        layout="@layout/blank_fly_info_item_text_arranged_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvSetRealTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvSetAirPortFrom" />
+
+    <TextView
+        android:id="@+id/tvFlyPlaneCurCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvSetFlyLineInfo"
+        app:layout_constraintTop_toBottomOf="@+id/tvSetAirPortArrival"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/imItemFlyInfoTypeIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.05"
+        app:srcCompat="@drawable/land_black" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

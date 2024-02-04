@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="darkCyan">#008B8B</color>
+    <color name="darkCyanNight">#518181</color>
+    <color name="teal">#58E4E4</color>
+    <color name="tealNight">#657A7A</color><!--水鴨色 -->
+    <color name="green">#008000</color><!--綠色 -->
+    <color name="darkGreen">#006400</color><!--暗綠色 -->
+    <color name="blue">#0000FF</color><!--藍色 -->
+    <color name="mediumBlue">#0000CD</color><!--中藍色 -->
+    <color name="pale_grey">#19d8d8d8</color>
+    <color name="full_background">#679198</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="blue_gray">#3D71A1</color>
+    <color name="blue_gray_night">#32485C</color>
+
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#fff</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorText">#1A1A1A</color>
+
+    <color name="colorPrimaryNight">#000</color>
+    <color name="colorPrimaryDarkNight">#000</color>
+    <color name="colorTextNight">#dcdcdc</color>
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clBottomNavi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="70dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <ImageView
+        android:id="@+id/imBottomSheetControllerTab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/clbottomTab"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        app:srcCompat="@drawable/bottom_sheet_tab" />
+
+    <TextView
+        android:id="@+id/tvBottomSheetExpectState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hiddenBottomSheet"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imBottomSheetControllerTab"
+        app:layout_constraintEnd_toEndOf="@+id/imBottomSheetControllerTab"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="@+id/imBottomSheetControllerTab"
+        app:layout_constraintTop_toTopOf="@+id/imBottomSheetControllerTab" />
+
+    <ImageView
+        android:id="@+id/imArrowHide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imBottomSheetControllerTab"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/imBottomSheetControllerTab"
+        app:layout_constraintStart_toEndOf="@+id/tvBottomSheetExpectState"
+        app:layout_constraintTop_toTopOf="@+id/imBottomSheetControllerTab"
+        app:layout_constraintWidth_percent="0.05"
+        app:srcCompat="@drawable/arrow_down" />
+
+    <ImageView
+        android:id="@+id/imSettingTab"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/clbottomTab"
+        app:layout_constraintDimensionRatio="1:0.4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        app:srcCompat="@drawable/bottom_sheet_tab_setting" />
+
+    <ImageView
+        android:id="@+id/imSetting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imSettingTab"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/tvSetting"
+        app:layout_constraintStart_toStartOf="@+id/imSettingTab"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.04"
+        app:srcCompat="@drawable/settings" />
+
+    <TextView
+        android:id="@+id/tvSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setting"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/imSettingTab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="@+id/imSettingTab"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clbottomTab"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/blue_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="375:50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clFlyInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imPageFlyInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25"
+                    app:layout_constraintWidth_percent="0.1"
+                    app:srcCompat="@drawable/airplane_black" />
+
+                <TextView
+                    android:id="@+id/tvFlyOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/flyOrder"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imPageFlyInfo"
+                    app:layout_constraintStart_toStartOf="@+id/imPageFlyInfo"
+                    app:layout_constraintTop_toBottomOf="@+id/imPageFlyInfo" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#466381" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clExRate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imPageCurrencyInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25"
+                    app:layout_constraintWidth_percent="0.1"
+                    app:srcCompat="@drawable/money_grey" />
+
+                <TextView
+                    android:id="@+id/tvExRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exRate"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imPageCurrencyInfo"
+                    app:layout_constraintStart_toStartOf="@+id/imPageCurrencyInfo"
+                    app:layout_constraintTop_toBottomOf="@+id/imPageCurrencyInfo" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

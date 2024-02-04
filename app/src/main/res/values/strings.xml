@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">FlyTPE</string>
+    <string name="make_sure_internet">請確認網路狀態</string>
+    <string name="takeOffTag">起飛班機</string>
+    <string name="arrivalTag">抵達班機</string>
+    <string name="flyOrder">航班</string>
+    <string name="exRate">匯率</string>
+    <string name="hiddenBottomSheet">隱藏</string>
+    <string name="expandBottomSheet">展開</string>
+    <string name="setting">設定</string>
+    <string name="OrderTime">預計時間</string>
+    <string name="RealTime">實際時間</string>
+    <string name="FlyPlaneNumber">航機班號：%s</string>
+    <string name="FlyPlaneGateNumber">航廈/登機門：%s/%s</string>
+    <string name="exChangeMoney">換算</string>
+    <string name="make_sure_input">請確認輸入邏輯</string>
+    <string name="personelSetting">個人設定</string>
+    <string name="nightMode">暗色模式</string>
+    <string name="default_coin">預設幣別</string>
+    <string name="flyInfoRetrofitError">航班資訊取得錯誤::</string>
+    <string name="currencyInfoRetrofitError">匯率資訊取得錯誤::</string>
+    <string-array name="coin">
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>CNY</item>
+        <item>EUR</item>
+        <item>JPY</item>
+        <item>USD</item>
+    </string-array>
+</resources>
